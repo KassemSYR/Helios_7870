@@ -22,12 +22,12 @@ CR_TC=~/Android/Toolchains/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 CR_DTS=arch/arm64/boot/dts
 CR_OUT=$CR_DIR/Helios/Out
 CR_AIK=$CR_DIR/Helios/A.I.K
-CR_RAMDISK=$CR_DIR/Helios/Ramdisk
+CR_RAMDISK=$CR_DIR/Helios/Treble
 CR_KERNEL=$CR_DIR/arch/arm64/boot/Image
 CR_DTB=$CR_DIR/boot.img-dtb
 # Kernel Variables
 CR_VERSION=V2.6
-CR_NAME=HeliosPro_Kernel
+CR_NAME=HeliosPro_Treble
 CR_JOBS=5
 CR_ANDROID=o
 CR_PLATFORM=8.0.0
