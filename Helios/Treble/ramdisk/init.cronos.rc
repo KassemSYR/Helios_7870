@@ -10,6 +10,20 @@ on boot
     start cronos
     start killer
 
+    # PropTweaks
+    setprop ro.config.tima 0
+    setprop ro.security.vaultkeeper.feature 0
+    setprop ro.frp.pst 0
+    setprop ro.securestorage.support false
+    setprop ro.config.dmverity false
+    setprop ro.config.rkp false
+    setprop ro.config.kap false
+    setprop ro.config.tima false
+    # ADB Insecure
+    setprop persist.service.adb.enable 1
+    setprop persist.service.debuggable 1
+    setprop persist.adb.notify 0
+
 on property:sys.boot_completed=1
 	
 on post-fs-data
