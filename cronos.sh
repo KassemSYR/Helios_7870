@@ -55,7 +55,7 @@ CR_VARIANT_J730F=J730F-G
 CR_DTSFILES_J710X="exynos7870-j7xelte_eur_open_00.dtb exynos7870-j7xelte_eur_open_01.dtb exynos7870-j7xelte_eur_open_02.dtb exynos7870-j7xelte_eur_open_03.dtb exynos7870-j7xelte_eur_open_04.dtb"
 CR_CONFG_J710X=j7xelte_03_defconfig
 CR_VARIANT_J710X=J710X
-CR_RAMDISK_J710X=$CR_DIR/Helios/Ramdisk_J710X
+CR_RAMDISK_J710X=$CR_DIR/Helios/Treble
 # Script functions
 CLEAN_SOURCE()
 {
