@@ -177,11 +177,11 @@ echo -n "SEANDROIDENFORCE" » $CR_AIK/image-new.img
 mv $CR_AIK/image-new.img $CR_OUT/$CR_NAME-$CR_VERSION-$CR_DATE-$CR_VARIANT.img
 $CR_AIK/cleanup.sh
 }
-600X()
+J600X()
 {
 echo "Cleaning"
-make clean
-make mrproper
+#make clean
+#make mrproper
 # rm -r -f $CR_OUT/*
 CR_VARIANT=$CR_VARIANT_J600X
 CR_NAME=$CR_NAME
@@ -222,7 +222,7 @@ clear
 echo "----------------------------------------------"
 echo "$CR_NAME $CR_VERSION Build Script"
 echo "----------------------------------------------"
-PS3='Please select your option (1-5): '
+PS3='Please select your option (1-6): '
 menuvar=("SM-J530_2G" "SM-J530_3G" "SM-J730F-G" "SM-J710X" "SM-J600X" "Exit")
 select menuvar in "${menuvar[@]}"
 do
@@ -318,6 +318,8 @@ do
             CR_VARIANT=$CR_VARIANT_J600X
             CR_CONFG=$CR_CONFG_J600X
             CR_DTSFILES=$CR_DTSFILES_J600X
+            export ANDROID_MAJOR_VERSION=$CR_ANDROID
+            export PLATFORM_VERSION=$CR_PLATFORM              
             J600X
             echo " "
             echo "----------------------------------------------"
