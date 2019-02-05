@@ -151,13 +151,13 @@ rm -rf $CR_DTS/.*.cmd
 rm -rf $CR_DTS/*.dtb
 echo "Building zImage for $CR_VARIANT"
 export LOCALVERSION=-$CR_NAME-$CR_VERSION-$CR_VARIANT-$CR_DATE
+export ANDROID_MAJOR_VERSION=$CR_ANDROID
+export PLATFORM_VERSION=$CR_PLATFORM
 make  $CR_CONFG_J710X
 make -j$CR_JOBS
 echo "Building DTB for $CR_VARIANT"
 export $CR_ARCH
 export CROSS_COMPILE=$CR_TC
-#export ANDROID_MAJOR_VERSION=$CR_ANDROID_J710X
-#export PLATFORM_VERSION=$CR_PLATFORM_J710X
 make $CR_CONFG_J710X
 make $CR_DTSFILES_J710X
 ./scripts/dtbTool/dtbTool -o ./boot.img-dtb -d $CR_DTS/ -s 2048
