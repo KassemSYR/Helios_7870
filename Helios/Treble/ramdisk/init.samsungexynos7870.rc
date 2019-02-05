@@ -71,6 +71,12 @@ on post-fs-data
     chmod 0660 /dev/i2c-20
     chown audio audio /dev/i2c-20
 
+    chown system audio /sys/class/nxp/tfa_log/data
+    chown system audio /sys/class/nxp/tfa_log/data_maxx
+    chown system audio /sys/class/nxp/tfa_log/count_overxmax
+    chown system audio /sys/class/nxp/tfa_log/data_maxt
+    chown system audio /sys/class/nxp/tfa_log/count_overtmax
+
 on boot
     # override init.rc to keep plenty of large order chunks around
     # to improve allocation times
@@ -197,6 +203,15 @@ on boot
     chmod 0660 /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration
     chown system system /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
     chmod 0660 /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
+	
+    # MSP Core Status
+    chown system system /sys/devices/system/cpu/cpu1/online
+    chown system system /sys/devices/system/cpu/cpu2/online
+    chown system system /sys/devices/system/cpu/cpu3/online
+    chown system system /sys/devices/system/cpu/cpu4/online
+    chown system system /sys/devices/system/cpu/cpu5/online
+    chown system system /sys/devices/system/cpu/cpu6/online
+    chown system system /sys/devices/system/cpu/cpu7/online
 
     # RTC status
     chown system system /sys/power/rtc_status
@@ -228,7 +243,7 @@ on boot
     chmod 0660 /dev/ttySAC0
 
 #MST HW Support
-#setprop ro.mst.support 1
+setprop ro.mst.support 0
 
 #Secure OS migration
     chown radio system /sys/devices/system/sec_os_ctrl/migrate_os

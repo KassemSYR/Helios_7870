@@ -59,10 +59,10 @@
 /dev/HPD                  0660   system     system
 
 # mfc
-/dev/video6               0660   mediacodec mediadrm
-/dev/video7               0660   mediacodec mediadrm
-/dev/video8               0660   mediacodec mediadrm
-/dev/video9               0660   mediacodec mediadrm
+/dev/video6               0660   mediacodec      mediadrm
+/dev/video7               0660   media      mediadrm
+/dev/video8               0660   media      mediadrm
+/dev/video9               0660   media      mediadrm
 
 # camera
 /dev/video100             0660   cameraserver   camera
@@ -161,7 +161,7 @@
 
 # TEEGRIS
 /dev/tzdev		0660	system		system
-/dev/ionfd2phys		0660	system		radio
+/dev/ionfd2phys		0660	system		system
 /dev/tuihw		0660	system		system
 /dev/tzirs		0660	system		system
 /dev/tz_shmem_validator	0666    system		system

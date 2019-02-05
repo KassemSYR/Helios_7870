@@ -1224,6 +1224,17 @@ on boot
     chmod 0644 /efs/cpk/h2k.dat
     chown system system /efs/drm/h2k
 
+    # icd
+    check_icd
+    chown system system /dev/icd
+    chmod 0644 /dev/icd
+    chown system system /dev/icdr
+    chmod 0644 /dev/icdr
+    chown system nfc /dev/tzic
+    chmod 0660 /dev/tzic
+    restorecon /dev/icd
+    restorecon /dev/icdr
+
     # Permissions for Touchscreen
     chown system radio /sys/class/sec/tsp/cmd
     chown system system /sys/class/sec/tsp/input/enabled
